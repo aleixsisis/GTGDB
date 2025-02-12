@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <p>Welcome to Rock, Paper, Rate! Its a database filled with user reviews of your favourite (and not-so-favourite) video games. So, make an account, sit back and rock, paper, Rate!</p>
+
+
+    {% if session['username'] %}
+    <br>
+    <p>Hello {{ session['username'] }}</p>
+    {% endif %}
+
+    <a href="/add"><button>Add review?</button></a>
+
+</div>
+
+<br>
+
+<table class="guess_table">
+
+    <thead>
+        <th>Date</th>
+        <th>User</th>
+        <th>Game</th>
+        <th>Score</th>
+        <th>Review</th>
+    </thead>
+
+    <tbody>
+        {% for guess in guesses %}
+        <tr>
+            <td>{{ guess['date'] }}</td>
+            <td>{{ guess['username'] }}</td>
+            <td>{{ guess['game'] }}</td>
+            <td>{{ guess['score'] }}</td>
+            <td>{{ guess['review'] }}</td>           
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock %}

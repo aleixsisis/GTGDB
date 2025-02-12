@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add a rating?</h2>
+<form action="/add" method="post">
+    <label>Game: </label>
+    <input type="text" name="game" id="game">
+    <label>Review: </label>
+    <input type="text" name="review" id="review">
+    <label>Date: </label>
+    <input type="date" name="date" id="date">
+    <label>Rating: </label>
+    <input type="number" name="score" id="score">
+    <input type="submit" value="Add rating">
+</form>
+{% endblock %}

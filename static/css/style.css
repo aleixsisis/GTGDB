@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fcd1d1; /* Soft pastel pink background */
+    font-family: "Poppins", 'sans-serif';
+    font-size: 1rem;
+    font-weight: 400;
+    color: #f05294;
+    background: linear-gradient(45deg, #ffc9db, #f0a2b9, #ffb8d3, #f38fb2);
+    animation: gradientAnimation 8s infinite, fadeInText 3s ease-out; /* Gradient animation and fade-in effect for text */
+    background-size: 600% 600%;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Fade-in animation for text */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+.banner {
+    padding: 25px 40px; /* Added a bit more padding for a plush feel */
+    text-align: center;
+    background: linear-gradient(145deg, #f9a6c1, #ff8da5); /* Soft gradient from light to a deeper pink */
+    color: #ffffff; /* Pure white text for contrast */
+    font-size: 3.5em; /* Slightly larger font for a more bubbly feel */
+    font-family: 'Poppins', sans-serif; /* Added a cute, rounded font */
+    border-radius: 50px; /* Rounded corners for extra softness */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for a dreamy feel */
+    background-image: url('https://www.transparenttextures.com/patterns/purty-woods.png'); /* Soft texture for depth */
+    background-size: 150%; /* Slightly stretched background for more charm */
+    animation: fadeInText 2s ease-out; /* Text fade-in effect */
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid #ffb3d9; /* Soft pink border for a delicate frame */
+    transform: scale(1.05); /* Slightly scaled up for a fun, bubbly feel */
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+nav {
+    overflow: hidden;
+    background: linear-gradient(145deg, #f7a1c3, #ff8da5); /* Soft gradient for a dynamic pink look */
+    text-align: center;
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Poppins', sans-serif; /* Cute, rounded font */
+    font-size: 1.5em; /* Slightly larger font for a more playful vibe */
+    border-radius: 50px; /* More rounded corners for a soft, bubbly feel */
+    box-shadow: 0 8px 20px rgba(255, 163, 206, 0.15), 0 4px 8px rgba(255, 163, 206, 0.1); /* Softer, dreamier shadows */
+    animation: fadeInText 3s ease-out; /* Smooth fade-in effect */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 12px 0; /* Added some padding for balance and spacing */
+    border: 2px solid #ffb3d9; /* Soft pink border to enhance the bubbly look */
+    transform: scale(1.03); /* Slight scale effect for more emphasis */
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+nav a {
+    display: inline-block;
+    color: #e47a8b; /* Soft pink color */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+}
+
+nav a:hover {
+    background-color: #f8b2c0; /* Soft hover effect */
+    color: #f0526c; /* Slightly darker pink on hover */
+}
+
+nav a.active {
+    background-color: #f2576e; /* More intense pink for active link */
+    color: #ffe7e7; /* Very light pink text */
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+.guess_table {
+    font-family: Nunito, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 100px; /* Rounded table */
+}
+
+.guess_table td, .guess_table th {
+    border: 0px solid #f8a0b8; /* Soft pastel border */
+    padding: 12px;
+    border-radius: 100px; /* Rounded table */
+}
+
+.guess_table tr:nth-child(even) {
+    background-color: #fce2ec; /* Soft alternating row color */
+}
+.guess_table tr:nth-child(odd) {
+    background-color: #fac9d9; /* Soft alternating row color */
+}
+
+.guess_table tr:hover {
+    background-color: #f0a0c0; /* Soft pink hover effect */
+}
+
+.guess_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f79eb4; /* Pastel pink header */
+    color: #fff7f7; /* Light text color */
+    border-radius: 8px; /* Rounded header */
+    box-shadow: inset 0 0 10px rgba(255, 80, 162, 0.05); /* Soft inset shadow */
+}
+
+input[type=text], input[type="password"], input[type="date"], input[type="number"], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #f8b7c7; /* Soft border */
+    border-radius: 8px; /* Rounded input fields */
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s; /* Smooth focus transition */
+}
+
+input[type=text]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #f2576e; /* Soft pink focus border */
+    outline: none; /* Removes default outline */
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #f07d8b; /* Warm pastel pink button */
+    color: #fef4f4; /* Light text for contrast */
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.05em;
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+input[type=submit]:hover {
+    background-color: #f26373; /* Darker pink on hover */
+}
+
+button {
+    background-color: #f0a3b1; /* Pastel button color */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.05em;
+    transition: background-color 0.3s; /* Smooth hover transition */
+
+}
+
+button:hover {
+    background-color: #f07d8b; /* Darker pink hover effect */
+}
