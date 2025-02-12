@@ -1,5 +1,8 @@
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Flask, render_template, request, redirect, url_for, app, get_db_connection
+
+
 
 def GetDB():
 
@@ -63,5 +66,35 @@ def AddGuess(user_id, date, game, score, review):
     db.execute("INSERT INTO Guesses(user_id, date, game, score, review) VALUES (?, ?, ?, ?, ?)",
                (user_id, date, game, score, review))
     db.commit()
+    
+    
+# Update Guess
+@app.route('/guesses/update/<int:user_id>', methods=['GET', 'POST'])
+def update_guess(user_id):
+    db = get_db_connection()
+    if request.method == 'POST':
+        # Get data from form
+        score = request.form['score']
+        review = request.form['review']
+
+        # Update the database
+        db.execute('UPDATE Guesses SET score = ?, review = ? WHERE user_id = ?',
+                   (score, review, user_id))
+        db.commit()
+        db.close()
+
+        return redirect(url_for('get_guess', user_id=user_id))  # Redirect to view updated guess
+
+    # If it's a GET request, retrieve current data for form
+    guess = db.execute('SELECT * FROM Guesses WHERE user_id = ?', (user_id,)).fetchone()
+    db.close()
+
+    if guess:
+        return render_template('update_guess.html', guess=guess)  # Render the update form
+    else:
+        return 'No guess found for this user_id', 404
+    
+    
+    
 
     return True

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<form method="POST">
+    <label for="score">Score:</label>
+    <input type="text" id="score" name="score" value="{{ guess['score'] }}">
+    <label for="review">Review:</label>
+    <input type="text" id="review" name="review" value="{{ guess['review'] }}">
+    <button type="submit">Update</button>
+</form>
+{% endblock %}
